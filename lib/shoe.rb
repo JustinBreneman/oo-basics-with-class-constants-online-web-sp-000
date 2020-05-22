@@ -5,23 +5,11 @@ class Shoe
   attr_reader :brand
 
   BRANDS = []
+  BRANDS_ALL = []
 
   def initialize(brand)
-    #BRANDS << brand
+    BRANDS_ALL << brand
     @brand = brand
-    if BRANDS.length < 1
-      BRANDS << brand
-    else
-      BRANDS.each do |brandli|
-        if brand == brandli
-          break
-        else
-          BRANDS << brand
-        end
-        BRANDS
-      end
-    end
-    binding.pry
   end
 
   def cobble
